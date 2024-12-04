@@ -20,10 +20,10 @@ export default function Home() {
       <section className="relative p-6">
         <div className="mx-auto max-w-[1440px]">
           <div className="pt-8 pb-8 md:pt-[144px] md:pb-[52px] lg:pt-[192px] lg:pb-[52px]">
-            <h1 className="text-2xl md:text-[68px] md:leading-[84px] ml-8">
-              Designing Wonders,<br /> Unleashing Dreams
+            <h1 className="text-2xl md:text-[68px] md:leading-[84px] ml-2 lg:text-7xl lg:ml-12">
+              Designing Wonders,<br/> Unleashing Dreams
             </h1>
-            <div className="mt-14 md:mt-[88px]">
+            <div className="mt-10 md:mt-[88px] sm:mt-[40px] lg:ml-12 ">
               <CircleWithArrow content="our-missions" />
             </div>
           </div>
@@ -47,10 +47,10 @@ export default function Home() {
           </div>
         </div>
 
-          <div className="absolute sm:w-[150px] sm:h-[120px] w-[250px] h-[250px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] right-8 top-[4%] md:top-[18%] z-30">
+          <div className="absolute w-[250px] right-0 mt-36 h-[200px] pr-0 mb-2 sm:pt-24 md:w-[420px] md:h-[420px] lg:w-[650px] lg:top-[-80px] lg:h-[600px] lg:right-8 top-[5%] md:top-[19%] ">
             <Model3D modelPath={model3dObjects.cloud} color="#dcdcdc" />
           </div>
-          <div className="absolute right-0 top-[30%] md:top-[40%] z-10">
+          <div className="absolute right-0 top-[30%] md:top-[40%]">
             <Slide direction="right" triggerOnce>
               <EllipseWithStar side="right" />
             </Slide>
@@ -82,9 +82,9 @@ export default function Home() {
       </section>
 
       {/* What make us unique section*/}
-      <section className="mt-8 md:mt-32 relative">
-        <div className="max-w-5xl mx-auto flex justify-center items-center">
-          <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:top-[-125px] md:left-[-150px]">
+      <section className="mt-8 md:mt-32 relative ">
+        <div className="max-w-5xl mx-4 flex justify-center items-center lg:mx-auto">
+          <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:top-[-180px] md:left-[-100px]">
             <Model3D modelPath={model3dObjects.w} toScale={[3, 3, 3]} color="#dcdcdc" spin /> {/*Make this around-self*/}
           </div>
           <div className="absolute top-[-150px] md:top-[-225px] right-0">
@@ -93,7 +93,7 @@ export default function Home() {
             </Slide>
           </div>
 
-          <div className="border-t border-b py-8 md:py-16 md:px-12 lg:px-12 border-t-black border-b-black">
+          <div className="border-t border-b py-8 md:py-16 md:px-12 lg:px-12 border-t-black border-b-black ">
             <h1 className="relative flex items-center mb-10 text-2xl md:text-5xl">
               <div className="hidden md:block absolute left-[-50px]">
                 <Star stroke />
@@ -118,18 +118,18 @@ export default function Home() {
             <SmallBanner side="left" />
           </Slide>
         </div>
-        <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:bottom-[-250px] md:right-[50px]">
-          <Model3D modelPath={model3dObjects.n} toScale={[3, 3, 3]} color="#dcdcdc" spin /> {/* more right and center and bigger*/}
+        <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:bottom-[-230px] md:right-[-60px] lg:right-[20px]">
+          <Model3D modelPath={model3dObjects.n} toScale={[3, 3, 3]} color="#dcdcdc" spin /> {/*Make this around-self*/}
         </div>
       </section>
 
       {/* Our services */}
-      <section className="mt-4 mb-8 md:mt-16 md:mb-32">
-        <div className="px-0 mx-0">
-          <div className="flex justify-end">
+      <section className="mt-20 mb-8 sm:mt-14 md:mt-18 md:mb-32">
+        <div className=" px-0 mx-4">
+          <div className="flex justify-end md:pr-12 mt-[-36px] sm:mt-[-20px] mb-5 mr-5">
             <CircleWithArrow content="our-services" />
           </div>
-          <div className="mt-4 mb-12 md:mt-8 md:mb-24">
+          <div className="mt-0 mb-12 md:mt-8 md:mb-24">
             <Marquee speed={120} className='h-[32px] md:h-[64px]' direction="right" autoFill>
               <div className="flex">
                 <span className="text-xl md:text-5xl uppercase">Our Services</span>
@@ -140,13 +140,13 @@ export default function Home() {
           <div className="mx-auto max-w-[1108px]">
             <Slide direction="up" triggerOnce>
               <Fade triggerOnce>
-                <p className="text-md md:text-xl text-black-600 mb-16">At Wonder Lab, we offers a comprehensive suite of services tailored to bring your XR visions to life, from 3D modeling to game/app development.
+                <p className="text-md sm:mx-8 md:text-xl text-black-600 mb-16">At Wonder Lab, we offers a comprehensive suite of services tailored to bring your XR visions to life, from 3D modeling to game/app development.
                   Our team excels in user research and UI/UX design, ensuring your project not only looks stunning but also delivers an intuitive and engaging experience.
                   Let us transform your ideas into immersive realities.
                 </p>
               </Fade>
             </Slide>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:mx-8">
               {ourServiceItems.map((item, key) => (
                 <Slide direction="up" triggerOnce delay={key * 300} key={key}>
                   <Fade delay={key * 300} triggerOnce>

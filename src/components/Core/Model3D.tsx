@@ -42,15 +42,16 @@ const Model: React.FC<ModelProps> = ({ modelPath, color = 'white', spin }) => {
   }, [scene, color]);
 
   return (
-    <group ref={groupRef}>
+    <group ref={groupRef} scale={[4, 4, 4]}>
       <primitive object={scene} />
     </group>
   );
 };
 
+
 const Model3D: React.FC<Model3DProps> = ({ modelPath, color, spin }) => {
   return (
-    <Canvas style={{ width: '100%', height: '100%' }}>
+    <Canvas style={{ width: '100%', height: '100%', zIndex: '30'}}>
       {/* Lighting */}
       <ambientLight intensity={0.6} />
       <directionalLight position={[5, 10, 5]} intensity={1} />

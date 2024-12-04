@@ -56,8 +56,8 @@ export default function AboutUs() {
                         </Slide>
                     </div>
                     <Slide direction="right" triggerOnce>
-                        <div className="absolute right-0 w-[350px] h-[200px] md:w-[600px] md:h-[200px] ">
-                            <Model3D modelPath={model3dObjects.wave} color="#DAD3BE" />
+                        <div className="absolute right-0 w-[200px] h-[150px] md:w-[800px] md:h-[300px] ">
+                            <Model3D modelPath={model3dObjects.wave} color="#DAD3BE"/> {/*Make this around-self*/}
                         </div>
                     </Slide>
                 </div>
@@ -70,7 +70,7 @@ export default function AboutUs() {
                         <StarFlower className="mx-2" />
                     </div>
                 </Marquee>
-                <div className="absolute w-[200px] h-[200px] md:w-[400px] md:h-[400px] left-0 top-[0px]">
+                <div className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[450px]  left-0 top-0 p-4">
                     <Model3D modelPath={model3dObjects.star} color="#B7B597" spin />
                 </div>
                 <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-12">
@@ -87,10 +87,10 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-                <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] right-0 bottom-[0px] top-[550px]">
+                <div className="absolute w-[200px] h-[200px] md:w-[200px] md:h-[350px] left-[85%] right-0 top-[550px] p-4">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
-            </section>
+            </section>  
         </>
     )
 }

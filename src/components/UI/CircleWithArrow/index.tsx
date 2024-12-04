@@ -32,7 +32,7 @@ const CircleWithArrow: FunctionComponent<CircleWithArrowProps> = ({ content }) =
     }, []);
 
     return (
-        <div className="relative h-[64px] w-[64px] md:h-[145px] md:w-[145px] ml-8">
+        <div className="relative sm:h-[88px] sm:w-[88px] h-[64px] w-[64px] md:h-[145px] md:w-[145px] ml-2">
             <div
                 className="transform-gpu"
                 style={{ transform: `rotate(${rotationAngle}deg)` }}
