@@ -15,14 +15,14 @@ import { Slide, Fade } from "react-awesome-reveal";
 export default function AboutUs() {
     return (
         <>
-            <section className="relative p-6">
+            <section className="relative p-6 mx-0">
                 <div className="my-8 md:mt-[88px]">
                     <CircleWithArrow content="about-us" />
                 </div>
                 <div className="flex">
                     <div>
                         <Slide direction="up" triggerOnce>
-                            <h1 className="w-[125px] md:w-[350px] lg:w-[450px] text-2xl md:text-[68px] md:leading-[84px]">About Us</h1>
+                            <h1 className="w-[125px] md:w-[350px] lg:w-[450px] text-2xl md:text-[68px] md:leading-[84px]">About us</h1>
                             <Star stroke />
                         </Slide>
                     </div>
@@ -49,21 +49,21 @@ export default function AboutUs() {
                         </Slide>
                     </div>
                 </div>
-                <div className="h-[150px] md:h-[300px] w-full">
-                    <div className="absolute left-0 bottom-[50%] md:bottom-0">
+                <div className="h-[150px] md:h-[200px] w-full mx-0 px-0 mb-0">
+                    <div className="absolute left-0 md:w-[350px] md:h-[350px] md:bottom-0 top-[62%]  ">
                         <Slide direction="left" triggerOnce>
                             <EllipseWithStar side="left" />
                         </Slide>
                     </div>
                     <Slide direction="right" triggerOnce>
-                        <div className="absolute w-[350px] h-[200px] md:w-[600px] md:h-[400px] right-0">
+                        <div className="absolute right-0 w-[350px] h-[200px] md:w-[600px] md:h-[200px] ">
                             <Model3D modelPath={model3dObjects.wave} color="#DAD3BE" />
                         </div>
                     </Slide>
                 </div>
             </section>
 
-            <section className="relative my-4 md:my-16">
+            <section className="relative my-4 md:my-16 mx-0">
                 <Marquee speed={120} className='h-[32px] md:h-[64px]' autoFill>
                     <div className="flex">
                         <span className="text-xl md:text-5xl uppercase">MEET THE FOUNDERS</span>
@@ -73,11 +73,11 @@ export default function AboutUs() {
                 <div className="absolute w-[200px] h-[200px] md:w-[400px] md:h-[400px] left-0 top-[0px]">
                     <Model3D modelPath={model3dObjects.star} color="#B7B597" spin />
                 </div>
-                <div className="mt-16 flex flex-col md:flex-row justify-center items-center">
+                <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-12">
                     {founders.map((item, key) => (
-                        <div className="flex flex-col justify-center items-center mx-6 md:mx-12 my-4 md:my-0" key={key}>
-                            <div className="rounded-t-[180px] w-[142px] h-[198px] md:w-[320px] md:h-[442px] overflow-hidden">
-                                <Image src={item.imageURL} width={320} height={442} alt="case-study" />
+                        <div className="flex flex-col justify-center left-0 mx-6 md:mx-12 my-4 md:my-0" key={key}>
+                            <div className="rounded-t-[180px] w-[142px] h-[198px] md:w-[400px] md:h-[512px] overflow-hidden">
+                                <Image src={item.imageURL} width={400} height={512} alt="case-study" />
                             </div>
                             <div className="font-bold text-md md:text-2xl mt-2 md:mt-4 md:mb-2">{item.name}</div>
                             <div className="text-sm md:text-xl md:mt-4 md:mb-2">{item.role}</div>
@@ -87,7 +87,7 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-                <div className="absolute w-[200px] h-[200px] md:w-[400px] md:h-[400px] right-0 bottom-[0px]">
+                <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] right-0 bottom-[0px] top-[550px]">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
             </section>

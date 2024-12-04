@@ -11,7 +11,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
         <footer className="bg-black">
             <div className="mx-auto max-w-[1440px]">
                 <div className="p-6">
-                    <div className="block md:flex space-x-12 items-center pt-4 md:pt-20">
+                    <div className="block md:flex space-x-12 items-center pt-4 md:pt-16">
                         <div className="flex items-center text-white space-x-4 mb-4">
                             <h1 className="text-xl md:text-4xl lg:text-6xl">Let’s get in touch</h1>
                             <FaRegSmile className="h-5 w-5 md:h-12 md:w-12 lg:h-14 lg:w-14" />
@@ -23,19 +23,19 @@ const Footer: FunctionComponent<FooterProps> = () => {
                             Tell us your next big idea
                         </button>
                     </div>
-                    <div className="text-gray-300 pb-4 pt-4 md:pb-16 md:pt-8 lg:pb-20 lg:pt-12">
-                        <div className="flex space-x-2">
+                    <div className="text-gray-300 pb-2 pt-4 md:pb-8 md:pt-8 lg:pb-8 lg:pt-12 w-[500px]">
+                        <div className="flex space-x-2 text-xl">
                             <p>Find us on social media:</p>
                             <a className="text-white" href="#">
-                                <FaInstagram size={24} />
+                                <FaInstagram size={30} />
                             </a>
                             <a className="text-white" href="#">
-                                <FaLinkedin size={24} />
+                                <FaLinkedin size={30} />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className="text-gray-300 text-center py-4">
+                <div className="text-gray-300 text-center py-3">
                     Copyright © 2024 Wonder Lab®
                 </div>
             </div>

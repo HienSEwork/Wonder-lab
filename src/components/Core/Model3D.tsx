@@ -5,66 +5,63 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 type Model3DProps = {
-  modelPath: string
-  color?: string
-  fromScale?: [number, number, number]
-  toScale?: [number, number, number]
-  spin?: boolean
+  modelPath: string;
+  color?: string;
+  fromScale?: [number, number, number];
+  toScale?: [number, number, number];
+  spin?: boolean;
 };
 
-type ModelProps = Model3DProps
+type ModelProps = Model3DProps;
 
-const Model: React.FC<ModelProps> = ({ modelPath, color = 'white', fromScale = [2, 2, 2], toScale = [4, 4, 4], spin }) => {
+const Model: React.FC<ModelProps> = ({ modelPath, color = 'white', spin }) => {
   const { scene } = useGLTF(modelPath);
-  const scaleRef = useRef(new THREE.Vector3(fromScale[0], fromScale[1], fromScale[2]));
+  const groupRef = useRef<THREE.Group>(null);
 
-   // Rotation
-   useFrame(() => {
-    if (spin) {
-      scene.rotation.y += 0.01; // Rotate the model by 0.01 radians per frame
+  useEffect(() => {
+    // Center the model
+    const box = new THREE.Box3().setFromObject(scene);
+    const center = box.getCenter(new THREE.Vector3());
+    scene.position.sub(center); // Adjust model to rotate around its middle point
+  }, [scene]);
+
+  // Self Rotation
+  useFrame(() => {
+    if (spin && groupRef.current) {
+      groupRef.current.rotation.y += 0.01; // Rotate around Y-axis
     }
   });
 
   useEffect(() => {
-    // Change color
+    // Change color of the model
     scene.traverse((child) => {
       if ((child as THREE.Mesh).isMesh) {
         ((child as THREE.Mesh).material as THREE.MeshStandardMaterial).color.set(color);
       }
     });
-
-    const targetScale = new THREE.Vector3(toScale[0], toScale[1], toScale[2]); // Target scale set to 4
-    const duration = 1000; // Duration of 1 second
-    const startTime = Date.now();
-
-    const animateScale = () => {
-      const elapsedTime = Date.now() - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      const newScale = scaleRef.current.lerpVectors(new THREE.Vector3(2, 2, 2), targetScale, progress);
-      scene.scale.set(newScale.x, newScale.y, newScale.z);
-      if (progress < 1) {
-        requestAnimationFrame(animateScale);
-      }
-    };
-
-    animateScale();
-  }, [scene]);
-
-  return <primitive object={scene} />;
-};
-
-const Model3D: React.FC<Model3DProps> = ({ modelPath, color, fromScale, toScale, spin }) => {
+  }, [scene, color]);
 
   return (
+    <group ref={groupRef}>
+      <primitive object={scene} />
+    </group>
+  );
+};
+
+const Model3D: React.FC<Model3DProps> = ({ modelPath, color, spin }) => {
+  return (
     <Canvas style={{ width: '100%', height: '100%' }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
+      {/* Lighting */}
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[5, 10, 5]} intensity={1} />
       <Suspense fallback={null}>
-        <Model modelPath={modelPath} color={color} fromScale={fromScale} toScale={toScale} spin={spin}/>
+        <Model modelPath={modelPath} color={color} spin={spin} />
       </Suspense>
-      {/* <OrbitControls /> */}
+      <OrbitControls enableZoom={false} />
     </Canvas>
   );
 };
+
+
 
 export default Model3D;

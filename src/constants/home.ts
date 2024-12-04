@@ -13,12 +13,12 @@ const whatMakesUsUniqueContent = [
 ]
 
 const ourServiceItems = [
-    { imageURL: '/images/2d-assets/service-01.png', title: '3D', content: '3D asset creation, scene design, environment design' },
-    { imageURL: '/images/2d-assets/service-02.png', title: 'XR Experiences', content: 'XR interaction design, immersive storytelling, rapid prototyping' },
-    { imageURL: '/images/2d-assets/service-03.png', title: 'Game/App development', content: 'Develop in Unity for IOS, Meta Quest and WebGL' },
-    { imageURL: '/images/2d-assets/service-04.png', title: 'Research & design', content: 'User research, UI/UX design and usability testing' },
+    { imageURL: '/images/2d-assets/service-02.png', title: '3D', content: '3D asset creation, scene design, environment design' },
+    { imageURL: '/images/2d-assets/service-03.png', title: 'XR Experiences', content: 'XR interaction design, immersive storytelling, rapid prototyping' },
+    { imageURL: '/images/2d-assets/service-01.png', title: 'Game/App development', content: 'Develop in Unity for IOS, Meta Quest and WebGL' },
+    { imageURL: '/images/2d-assets/service-06.png', title: 'Research & design', content: 'User research, UI/UX design and usability testing' },
     { imageURL: '/images/2d-assets/service-05.png', title: 'Sound design & animation', content: 'Spatial sound design, 2D & 3D motion design' },
-    { imageURL: '/images/2d-assets/service-06.png', title: 'Product planning', content: 'Market research, strategic product planning' },
+    { imageURL: '/images/2d-assets/service-04.png', title: 'Product planning', content: 'Market research, strategic product planning' },
 ]
 
 export {
