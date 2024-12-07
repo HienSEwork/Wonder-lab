@@ -16,17 +16,17 @@ export default function AboutUs() {
     return (
         <>
             <section className="relative p-6 mx-0">
-                <div className="my-8 md:mt-[88px]">
+                <div className="my-2  md:mt-[88px] lg:my-8">
                     <CircleWithArrow content="about-us" />
                 </div>
-                <div className="flex">
+                <div className="flex mt-4">
                     <div>
                         <Slide direction="up" triggerOnce>
                             <h1 className="w-[125px] md:w-[350px] lg:w-[450px] text-2xl md:text-[68px] md:leading-[84px]">About us</h1>
                             <Star stroke />
                         </Slide>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full right-2 leading-small">
                         <Slide direction="up" triggerOnce delay={0}>
                             <Fade triggerOnce>
                                 <p className="mb-8 text-md md:text-xl leading-8">Welcome to Wonder Lab, a pioneering XR design studio where we transform dreams into captivating XR experiences. </p>
@@ -49,34 +49,34 @@ export default function AboutUs() {
                         </Slide>
                     </div>
                 </div>
-                <div className="h-[150px] md:h-[200px] w-full mx-0 px-0 mb-0">
-                    <div className="absolute left-0 md:w-[350px] md:h-[350px] md:bottom-0 top-[62%]  ">
+                <div className="h-[90px] md:h-[200px] w-full mx-0 px-0 mb-0">
+                    <div className="absolute left-0 w-[120px] h-[150px] md:w-[450px] md:h-[450px] md:bottom-0 top-[62%] lg:h-[600px] lg:w-[550px] lg:top-[64%]">
                         <Slide direction="left" triggerOnce>
                             <EllipseWithStar side="left" />
                         </Slide>
                     </div>
                     <Slide direction="right" triggerOnce>
-                        <div className="absolute right-0 w-[200px] h-[150px] md:w-[800px] md:h-[300px] ">
+                        <div className="absolute right-[-136px] w-[500px] mt-[-30px] h-[150px] md:w-[800px] md:h-[300px] lg:mr-[-300px] lg:mt-[-80px]">
                             <Model3D modelPath={model3dObjects.wave} color="#DAD3BE"/> {/*Make this around-self*/}
                         </div>
                     </Slide>
                 </div>
             </section>
 
-            <section className="relative my-4 md:my-16 mx-0">
+            <section className="relative mb-4 mt-0 md:my-16 mx-0 lg:mt-0 ">
                 <Marquee speed={120} className='h-[32px] md:h-[64px]' autoFill>
                     <div className="flex">
                         <span className="text-xl md:text-5xl uppercase">MEET THE FOUNDERS</span>
                         <StarFlower className="mx-2" />
                     </div>
                 </Marquee>
-                <div className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[450px]  left-0 top-0 p-4">
+                <div className="absolute w-[270px] h-[270px] ml-[-80px] mt-[-40px] md:w-[250px] md:h-[450px]  left-0 top-0 p-4">
                     <Model3D modelPath={model3dObjects.star} color="#B7B597" spin />
                 </div>
                 <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-12">
                     {founders.map((item, key) => (
-                        <div className="flex flex-col justify-center left-0 mx-6 md:mx-12 my-4 md:my-0" key={key}>
-                            <div className="rounded-t-[180px] w-[142px] h-[198px] md:w-[400px] md:h-[512px] overflow-hidden">
+                        <div className="flex flex-col justify-center left-0 mx-6 mt-[-40px] mb-[20px] md:mx-12 my-4 md:my-0" key={key}>
+                            <div className="rounded-t-[180px] w-[208px] h-[256x] md:w-[400px] md:h-[512px] overflow-hidden">
                                 <Image src={item.imageURL} width={400} height={512} alt="case-study" />
                             </div>
                             <div className="font-bold text-md md:text-2xl mt-2 md:mt-4 md:mb-2">{item.name}</div>
@@ -87,7 +87,7 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-                <div className="absolute w-[200px] h-[200px] md:w-[200px] md:h-[350px] left-[85%] right-0 top-[550px] p-4">
+                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[85%] lg:right-0 lg:top-[550px] p-4">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
             </section>  

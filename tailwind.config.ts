@@ -22,6 +22,9 @@ const config: Config = {
           '100%': { transform: 'rotate(360deg)' },
         },
       },
+      lineheight: {
+        'leading-small' : '0.75',
+      },
     },
   },
   plugins: [],

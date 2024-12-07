@@ -118,7 +118,7 @@ export default function Home() {
             <SmallBanner side="left" />
           </Slide>
         </div>
-        <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:bottom-[-230px] md:right-[-60px] lg:right-[20px]">
+        <div className="hidden md:block absolute md:w-[400px] md:h-[400px] md:bottom-[-230px] md:right-[-60px] lg:right-[-80px]">
           <Model3D modelPath={model3dObjects.n} toScale={[3, 3, 3]} color="#dcdcdc" spin /> {/*Make this around-self*/}
         </div>
       </section>
