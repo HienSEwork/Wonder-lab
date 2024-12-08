@@ -70,7 +70,7 @@ export default function AboutUs() {
                         <StarFlower className="mx-2" />
                     </div>
                 </Marquee>
-                <div className="absolute w-[270px] h-[270px] ml-[-80px] mt-[-40px] md:w-[250px] md:h-[450px]  left-0 top-0 p-4">
+                <div className="absolute w-[270px] h-[270px] ml-[-80px] mt-[-40px] md:w-[250px] md:h-[450px] lg:left-[70px] left-0 top-0 p-4">
                     <Model3D modelPath={model3dObjects.star} color="#B7B597" spin />
                 </div>
                 <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-12">
@@ -82,12 +82,12 @@ export default function AboutUs() {
                             <div className="font-bold text-md md:text-2xl mt-2 md:mt-4 md:mb-2">{item.name}</div>
                             <div className="text-sm md:text-xl md:mt-4 md:mb-2">{item.role}</div>
                             <Link href={item.url}>
-                                <span className="text-sm underline">Learn more</span>
+                                <span className="inline-flex items-center text-sm underline">Learn more<img src="/images/2d-assets/right-up.png" alt="arrow icon" className="bg-transparent w-4 h-4 ml-0"/></span>
                             </Link>
                         </div>
                     ))}
                 </div>
-                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[85%] lg:right-0 lg:top-[550px] p-4">
+                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[70%] lg:right-0 lg:top-[550px] p-4">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
             </section>  
