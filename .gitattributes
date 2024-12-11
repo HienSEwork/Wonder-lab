@@ -1,0 +1,6 @@
+public/videos/Frog.gif filter=lfs diff=lfs merge=lfs -text
+public/videos/Fox.gif filter=lfs diff=lfs merge=lfs -text
+public/videos/Cat.gif filter=lfs diff=lfs merge=lfs -text
+public/videos/Bloom.gif filter=lfs diff=lfs merge=lfs -text
+public/videos/Trailer.mov filter=lfs diff=lfs merge=lfs -text
+public/videos/Video.mov filter=lfs diff=lfs merge=lfs -text

@@ -87,7 +87,7 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[70%] lg:right-0 lg:top-[550px] p-4">
+                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[66%] lg:right-0 lg:top-[540px] p-4">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
             </section>  

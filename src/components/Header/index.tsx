@@ -12,7 +12,7 @@ import ContactUs, { ContactUsForm } from '../ContactUs'
 
 const navLinks = [
   { label: "Works", href: "/work" },
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/tale-of-shadow" },
   { label: "About us", href: "/about-us" },
 ]
 
