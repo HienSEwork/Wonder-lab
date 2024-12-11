@@ -11,8 +11,8 @@ import { MuseoModerno } from "next/font/google";
 import ContactUs, { ContactUsForm } from '../ContactUs'
 
 const navLinks = [
-  { label: "Works", href: "/work" },
-  { label: "Services", href: "/tale-of-shadow" },
+  { label: "Works", href: "/#works" },
+  { label: "Services", href: "/#services" },
   { label: "About us", href: "/about-us" },
 ]
 
@@ -28,7 +28,7 @@ export default function Example() {
   }
 
   return (
-    <header className="bg-black">
+    <header className="bg-black scroll-smooth">
       <nav className="mx-auto flex max-w-[1440px] items-center justify-between p-6 md:px-8" aria-label="Global">
         <div className="flex md:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">

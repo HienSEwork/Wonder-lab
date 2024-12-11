@@ -20,14 +20,19 @@ export default function Home() {
       <section className="relative p-6">
         <div className="mx-auto max-w-[1440px]">
           <div className="pt-8 pb-8 md:pt-[144px] md:pb-[52px] lg:pt-[192px] lg:pb-[52px]">
-            <h1 className="text-2xl md:text-[68px] md:leading-[84px] ml-2 lg:text-7xl lg:ml-12">
-              Designing Wonders,<br/> Unleashing Dreams
-            </h1>
-            <div className="mt-10 md:mt-[88px] sm:mt-[40px] lg:ml-12 ">
-              <CircleWithArrow content="our-missions" />
-            </div>
+          <div className="relative">
+            <Slide direction="up" triggerOnce delay={300}>
+              <h1 className="text-2xl md:text-[68px] md:leading-[84px] ml-2 lg:text-7xl lg:ml-12">
+                Designing Wonders,<br />
+                Unleashing Dreams
+              </h1>
+            </Slide>
           </div>
-          <div className="max-w-5xl mx-auto">
+              <div className="mt-10 md:mt-[88px] sm:mt-[40px] lg:ml-12 ">
+                <CircleWithArrow content="our-missions" />
+              </div>
+          </div>
+          <div id="works" className="max-w-5xl mx-auto">
             <div className="py-6 md:py-16 border-t border-t-black border-b border-b-black">
               <Slide direction="up" triggerOnce>
                 <Fade triggerOnce>
@@ -55,7 +60,6 @@ export default function Home() {
               <EllipseWithStar side="right" />
             </Slide>
           </div>
-        
       </section>
 
       {/* Case study section */}
@@ -66,7 +70,7 @@ export default function Home() {
             <StarFlower className="mx-2" />
           </div>
         </Marquee>
-        <Marquee speed={30} className="h-[325px] md:h-[576px]" pauseOnHover>
+        <Marquee speed={60} className="h-[325px] md:h-[576px]" pauseOnHover>
           {caseStudyItems.map((item, key) => (
             <div className="mx-4 md:mx-8" key={key}>
               <div className="rounded-[180px] w-[142px] h-[198px] md:w-[320px] md:h-[442px] overflow-hidden">
@@ -124,13 +128,13 @@ export default function Home() {
       </section>
 
       {/* Our services */}
-      <section className="mt-20 mb-8 sm:mt-14 md:mt-18 md:mb-32">
+      <section id="services" className="mt-20 mb-8 sm:mt-14 md:mt-18 md:mb-32">
         <div className=" px-0 mx-4">
           <div className="flex justify-end md:pr-12 mt-[-36px] sm:mt-[-20px] mb-5 mr-5">
             <CircleWithArrow content="our-services" />
           </div>
           <div className="mt-0 mb-12 md:mt-8 md:mb-24">
-            <Marquee speed={120} className='h-[32px] md:h-[64px]' direction="right" autoFill>
+            <Marquee speed={60} className='h-[32px] md:h-[64px]' direction="right" autoFill>
               <div className="flex">
                 <span className="text-xl md:text-5xl uppercase">Our Services</span>
                 <StarFlower className="mx-2" />
