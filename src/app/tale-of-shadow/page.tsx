@@ -63,18 +63,18 @@ export default function TaleOfShadow() {
                                     <div className="inset-0 flex items-center justify-center">
                                         <div>
                                             <ol className="space-y-2">
-                                            <li className="flex items-center">
-                                                <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
-                                                AR Anchoring: Ensuring that AR objects (like the animals and magic items) were accurately anchored around real-world locations.
-                                            </li>
-                                            <li className="flex items-center">
-                                                <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
-                                                Cross-Generational Appeal: Designing gameplay that was simple enough for younger children yet still compelling for adults.
-                                            </li>
-                                            <li className="flex items-center">
-                                                <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
-                                                Seamless Cross-Platform Compatibility: Ensuring a smooth experience for both iOS and Android users while maintaining high-quality AR interactions.
-                                            </li>
+                                                <li className="flex items-center">
+                                                    <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
+                                                    AR Anchoring: Ensuring that AR objects (like the animals and magic items) were accurately anchored around real-world locations.
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
+                                                    Cross-Generational Appeal: Designing gameplay that was simple enough for younger children yet still compelling for adults.
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <span className="inline-block w-2 h-2 bg-black rounded-full mr-3 mt-1"></span>
+                                                    Seamless Cross-Platform Compatibility: Ensuring a smooth experience for both iOS and Android users while maintaining high-quality AR interactions.
+                                                </li>
                                             </ol>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@ export default function TaleOfShadow() {
                                 <p className="mb-8 text-md lg:text-[19px]  leading-8 lg:mx-[48px]">
                                     The design of The Tale of Shadow was crafted with the goal of creating a visually captivating and enchanting experience for players of all ages. The games animals, such as Shadow the cat, were carefully modeled in Blender, with each character featuring hand-painted textures to give them a unique, magical feel. We paid special attention to their animations, bringing them to life with movements that added personality and charm, ensuring that they felt both playful and engaging.
                                     <br/><br/>
-                                    Drawing inspiration from popular children’s games, we developed an art style that was vibrant, approachable, and designed to appeal to younger audiences while maintaining a sense of wonder for adults. This art direction perfectly complemented the magical narrative and Central Park setting, making the game both visually appealing and deeply connected to its real-world environment.
+                                    Drawing inspiration from popular children`s games, we developed an art style that was vibrant, approachable, and designed to appeal to younger audiences while maintaining a sense of wonder for adults. This art direction perfectly complemented the magical narrative and Central Park setting, making the game both visually appealing and deeply connected to its real-world environment.
                                     <br/> <br/>
                                     The user interface (UI) design and game prototypes were created in Figma, with a focus on intuitive and accessible navigation. Our design process was highly iterative: after each prototype, we conducted extensive user testing to gather feedback on gameplay and messaging. This allowed us to refine the design at every stage, ensuring the game became increasingly user-friendly, while also enhancing its storytelling elements. Each iteration brought the design closer to our goal of creating a seamless, engaging experience that made exploring the park—and the game’s mysteries—both fun and easy to follow.
                                     <br/><br/>
@@ -229,7 +229,14 @@ export default function TaleOfShadow() {
                     </div>
                 </div>
             </section>
-
+            {/*Blackcat model */}
+            <section className="relative mb-4 mt-0 md:my-16 mx-0 lg:mt-0 ">
+                <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-12 lg:mx-[48px]">
+                    <div className="relative w-full h-[200px] overflow-hidden">
+                        
+                    </div>
+                </div>
+            </section> 
         </>
     )
 }

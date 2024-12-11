@@ -16,13 +16,13 @@ export default function AboutUs() {
     return (
         <>
             <section className="relative p-6 mx-0">
-                <div className="my-2  md:mt-[88px] lg:my-8">
+                <div className="my-2  md:mt-[88px] lg:my-8 lg:ml-12">
                     <CircleWithArrow content="about-us" />
                 </div>
-                <div className="flex mt-4">
+                <div className="flex mt-4 lg:ml-12">
                     <div>
                         <Slide direction="up" triggerOnce>
-                            <h1 className="w-[125px] md:w-[350px] lg:w-[450px] text-2xl md:text-[68px] md:leading-[84px]">About us</h1>
+                            <h1 className="w-[125px] md:w-[350px] lg:w-[450px] text-2xl md:text-[68px] md:leading-[84px] ">About us</h1>
                             <Star stroke />
                         </Slide>
                     </div>
@@ -56,7 +56,7 @@ export default function AboutUs() {
                         </Slide>
                     </div>
                     <Slide direction="right" triggerOnce>
-                        <div className="absolute right-[-136px] w-[500px] mt-[-30px] h-[150px] md:w-[800px] md:h-[300px] lg:mr-[-300px] lg:mt-[-80px]">
+                        <div className="absolute right-[-136px] w-[500px] mt-[-30px] h-[150px] md:w-[800px] md:h-[300px] lg:mr-0 lg:mt-[-40px]">
                             <Model3D modelPath={model3dObjects.wave} color="#DAD3BE"/> {/*Make this around-self*/}
                         </div>
                     </Slide>
@@ -87,7 +87,7 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[66%] lg:right-0 lg:top-[540px] p-4">
+                <div className="absolute ml-[240px] top-[650px] w-[270px] h-[270px] md:w-[200px] md:h-[350px] lg:left-[72%] lg:h-[400px] lg:right-0 lg:top-[500px] p-4">
                     <Model3D modelPath={model3dObjects.star2} color="#B7B597" spin />
                 </div>
             </section>  

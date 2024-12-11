@@ -70,15 +70,15 @@ export default function Home() {
             <StarFlower className="mx-2" />
           </div>
         </Marquee>
-        <Marquee speed={60} className="h-[325px] md:h-[576px]" pauseOnHover>
+        <Marquee speed={60} className="h-[325px] md:h-[576px] " pauseOnHover>
           {caseStudyItems.map((item, key) => (
-            <div className="mx-4 md:mx-8" key={key}>
-              <div className="rounded-[180px] w-[142px] h-[198px] md:w-[320px] md:h-[442px] overflow-hidden">
+            <div className="mx-4 md:mx-8 " key={key}>
+              <div className="rounded-[180px] w-[142px] h-[198px] md:w-[320px] md:h-[442px] bg-black overflow-hidden">
                 <Image src={item.imageURL} width={320} height={442} alt="case-study" />
               </div>
-              <div className="font-bold text-md md:text-3xl">{item.title}</div>
+              <div className="font-bold text-md md:text-3xl lg:mt-2 lg:ml-3">{item.title}</div>
               <Link href={item.url} >
-                <span className="inline-flex text-sm underline items-center">View case study<img src="/images/2d-assets/right-up.png" alt="arrow icon" className="bg-transparent w-4 h-4 ml-0"/></span> {/* miss arrow symboy */}
+                <span className="inline-flex text-sm underline items-center lg:ml-3">View case study<img src="/images/2d-assets/right-up.png" alt="arrow icon" className="bg-transparent w-4 h-4 ml-0"/></span> {/* miss arrow symboy */}
               </Link>
             </div>
           ))}

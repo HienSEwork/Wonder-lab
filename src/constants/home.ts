@@ -1,6 +1,6 @@
 const caseStudyItems = [
     { imageURL: '/images/2d-assets/case-study-01.png', title: 'Bloom', url: '#' },
-    { imageURL: '/images/2d-assets/case-study-02.jpg', title: 'Spring', url: '/tale-of-shadow' },
+    { imageURL: '/', title: 'The Tale of Shadow', url: '/tale-of-shadow' },
     { imageURL: '/images/2d-assets/case-study-03.jpg', title: 'Summer', url: '#' },
     { imageURL: '/images/2d-assets/case-study-01.png', title: 'Autumn', url: '#' },
     { imageURL: '/images/2d-assets/case-study-02.jpg', title: 'Winter', url: '#' },
